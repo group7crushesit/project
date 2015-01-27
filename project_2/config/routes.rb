@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-
-  get "/login", to: "sessions#new"
-
-  root to: "students#index"
+root to: "students#index"
 
   resources :users
+
+  resources :boards
 
   get "/sign_up", to: "users#new", as: "sign_up"
 
