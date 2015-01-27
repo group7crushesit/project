@@ -1,0 +1,17 @@
+{
+  "name": "project_2",
+  "version": "0.0.0",
+  "homepage": "https://github.com/group7crushesit/project",
+  "authors": [
+    "Ajesh Shah <ajeshshah@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ]
+}
