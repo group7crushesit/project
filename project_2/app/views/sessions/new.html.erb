@@ -1,0 +1,16 @@
+<%= form_for :user, url: "/sessions", method: "post" do |f| %>
+
+	<% flash.each do |name, msg| %>
+		<%= content_tag :div, msg, class: name %>
+	<% end %>
+	<div>
+		<%= f.text_field :email, placeholder: "email" %>
+	</div>
+	<div>
+		<%= f.text_field :password, placeholder: "password" %>
+	</div>
+	<div>
+		<%= f.submit %>
+	</div>
+
+<% end %>
