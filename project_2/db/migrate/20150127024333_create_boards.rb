@@ -6,8 +6,6 @@ class CreateBoards < ActiveRecord::Migration
       t.string :type
 
       t.timestamps null: false
-
-      t.reference :users
     end
   end
 end
