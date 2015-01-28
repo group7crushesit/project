@@ -1,16 +1,29 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   root to: "students#index"
+=======
+  root to: "sites#index" 
+
+  get "/login", to: "sessions#new"
+>>>>>>> bf24e511e3d5bb2dadbf49aa7a167a45b3f54d99
 
   resources :users
 
   resources :boards
 
+  resources :sites
+  
   get "/sign_up", to: "users#new", as: "sign_up"
 
+<<<<<<< HEAD
   get "/login", to: "sessions#new" 
   
   post "/sessions", to: "sessions#create"
+=======
+  get "/logout", to: "sessions#destroy"
+>>>>>>> bf24e511e3d5bb2dadbf49aa7a167a45b3f54d99
 
+  post "/sessions", to: "sessions#create"
 end
 
 #  Prefix Verb   URI Pattern               Controller#Action
