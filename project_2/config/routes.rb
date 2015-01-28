@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-root to: "students#index"
+  root to: "students#index"
 
   resources :users
 
@@ -7,6 +7,8 @@ root to: "students#index"
 
   get "/sign_up", to: "users#new", as: "sign_up"
 
+  get "/login", to: "sessions#new" 
+  
   post "/sessions", to: "sessions#create"
 
 end
