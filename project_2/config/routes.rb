@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
-  root to: "students#index"
 
-  resources :users
+  root to: "sites#index"
+
+  resources :users, except: [:index, :new]
 
   resources :boards
 
   get "/sign_up", to: "users#new", as: "sign_up"
 
-  get "/login", to: "sessions#new" 
-  
-  post "/sessions", to: "sessions#create"
+  # post "/sessions", to: "sessions#create"
+  get "/login", to: "sessions#new", as: "login"
+
+  resources :sessions, only: [:create, :destroy]
 
 end
 
