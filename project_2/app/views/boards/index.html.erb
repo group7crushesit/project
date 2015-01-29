@@ -1,3 +1,61 @@
+
+                                               
+
+<!-- old -->
+<h1 align="center">Boards</h1>
+<div align="center">
+<button type="button" class="btn btn-defualt" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Jobs</button>
+
+<button type="button" class="btn btn-defualt" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">RideShare</button>
+
+<button type="button" class="btn btn-defualt" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">Articles</button>
+
+<button type="button" class="btn btn-defualt" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Other</button>
+</div>
+
+<div class="row">
+<div class="container">
+<div class="panel panel-success">
+    <div class="panel-heading" align="center">
+        <h3 class="panel-title">Ride Share</h3>
+
+    </div>
+    <div class="panel-body">
+         Looking for a ride share from Sanoma to G.A? <p><a class="btn btn-primary btn-sml"  href="/users/new">Contact</a></p>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="row">
+<div class="container">
+<div class="panel panel-success">
+    <div class="panel-heading" align="center">
+        <h3  class="panel-title">Jobs</h3>
+    </div>
+    <div class="panel-body" >
+        Looking for a Javascript ninja to help in new start up for a sandwitch app.
+        <p><a class="btn btn-primary btn-sml"  href="/users/new">Contact</a></p>
+    </div>
+    </div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="container">
+<div class="panel panel-success">
+    <div class="panel-heading" align="center">
+        <h3 class="panel-title">Jobs</h3>
+    </div>
+    <div class="panel-body">
+        Looking for a ruby on rails hacker to join the instagram team.
+        <p><a class="btn btn-primary btn-sml"  href="/users/new">Contact</a></p>
+    </div>
+    </div>
+</div>
+</div>
+
 <% @posts.each do |post| %>
 
 <h1><%= link_to post.title.titleize , board_path(post.id) %></h1>
