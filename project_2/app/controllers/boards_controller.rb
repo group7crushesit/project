@@ -1,6 +1,5 @@
 class BoardsController < ApplicationController
   def index
-    @posts = Board.all
   end
 
   def new
@@ -46,12 +45,11 @@ class BoardsController < ApplicationController
         )
     end
 
-    def find_user_post
+    def set_user_post
       @post = current_user.boards.find_by({id: params[:id]})
       unless @post
-        redirect_to boards_path(current_user)
-      else
-        @post
+        redirect_to boards_path
     end
+
   end
 end
