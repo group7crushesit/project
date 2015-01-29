@@ -5,11 +5,9 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  adapter: sqlite3
   pool: 5
+  timeout: 5000
 
 development:
   <<: *default
@@ -20,10 +18,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database:  gasocial_rails_test
+  database: gasocial_rails_test
 
 production:
   <<: *default
   database: gasocial_rails_production
-  username: gasocial_rails
-  password: <%= ENV['GASOCIAL_RAILS_DATABASE_PASSWORD'] %>

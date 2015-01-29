@@ -15,8 +15,12 @@ class BoardsController < ApplicationController
   end
 
   def create
+
     @post = Board.create(post_params)
-    redirect_to board_path(@post)
+    redirect_to board_path(@post.id)
+
+    # @post = current_user.boards.create(post_params)
+    # redirect_to board_path(@post.id)
 
     # below is preferable, couldn't get it to work. above is quick fix.
 
