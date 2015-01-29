@@ -1,0 +1,11 @@
+<% @posts.each do |post| %>
+<div id="post">
+
+	<div class="title">
+		<h1><%= link_to post.title.titleize , board_path(post.id) %></h1>
+			<div class="description">
+			<%= post.description %>
+			</div>
+  <% end %>
+</div>
+

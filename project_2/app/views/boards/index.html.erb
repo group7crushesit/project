@@ -1,7 +1,8 @@
-<% @posts.each do |post| %>
+<h1>Boards</h1>
 
-<h1><%= link_to post.title.titleize , board_path(post.id) %></h1>
-<br>
-<%= post.description %>
 
-<% end %>
+<div id="posts">
+  <%= render partial: "boards/post" %>
+</div>
+
+<%= will_paginate @posts %>
