@@ -5,7 +5,7 @@ class CreateEnrollments < ActiveRecord::Migration
 
       t.timestamps null: false
 
-       t.references :student
+       t.references :user
       t.references :course
       
     end
