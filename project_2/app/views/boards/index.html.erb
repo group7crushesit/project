@@ -1,3 +1,4 @@
+<a href = "/boards/new">New Post</a>
 <% @posts.each do |post| %>
 
 <h1><%= link_to post.title.titleize , board_path(post.id) %></h1>
