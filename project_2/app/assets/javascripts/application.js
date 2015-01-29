@@ -16,3 +16,4 @@
 //= require_bootstrap-3.3.2.min.js
 //= sdfs
 //= require_tree .
+//= require bootstrap/dist/js/bootstrap
