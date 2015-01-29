@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root to: "sites#index" 
 
 
   root to: "sites#index"
