@@ -1,5 +1,11 @@
 <%= form_for @user do |f| %>
 	<div>
+		<%= f.text_field :first_name, placeholder: "first name" %>
+	</div>
+	<div>
+		<%= f.text_field :last_name, placeholder: "last name" %>
+	</div>
+	<div>
 		<%= f.text_field :email, placeholder: "email" %>
 	</div>
 	<div>
@@ -13,3 +19,5 @@
 	</div>
 
 <% end %>
+
+<!-- student, ga_staff, outsidertaco (rename to whatever), email, password_digest, about, linkedin_url, github_url, dribbble_url, behance_url, website_url, skills (tags), interest (tags), courses -->
