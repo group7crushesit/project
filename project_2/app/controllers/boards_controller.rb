@@ -1,13 +1,7 @@
 class BoardsController < ApplicationController
-  # def index
-  #   @posts = Board.all
-  # end
-
-
-  def index
-    @posts = Board.all.order(created_at: :desc)
+ def index
+    @posts = Board.paginate(page: params[:page], per_page: 8).order('created_at DESC')
   end
-
 
 
   def new
