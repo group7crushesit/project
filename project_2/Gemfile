@@ -26,11 +26,12 @@ gem 'pg'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-#Geocoder 
-gem 'geocoder'
+#API request
+gem 'dotenv-rails'
 
 #Pagination
 gem 'will_paginate'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'

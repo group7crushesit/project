@@ -11,9 +11,12 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+Ignore ENV file
+*.env
+
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
 /tmp
-.DS_Store
+*.DS_Store
 /.DS_Store

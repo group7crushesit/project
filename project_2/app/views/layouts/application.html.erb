@@ -7,7 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<script>
+	$(document).on("ready page:load", function(){
+	var geo = navigator.geolocation;
+	geo.getCurrentPosition(function(data) {
+console.log(data);});
+});
+</script>
 <%= yield %>
 
 </body>
