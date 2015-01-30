@@ -62,7 +62,8 @@ Enlisted the help of the folks from the UX class to help validate our idea, our 
 
 
 ####Wireframes
-![screenshot of wireframe-1]()
+![screenshot of wireframe-1](https://lh3.googleusercontent.com/-jV_2ioFfROU/VMvXOKHiXBI/AAAAAAAAU4Q/ND0ubpmAjpQ/w972-h1296-no/photo%2B%283%29.jpg)
+![screenshot of wireframe-2](https://lh3.googleusercontent.com/-uyieCEdgyGQ/VMvXOZGVMSI/AAAAAAAAU4U/e9xImA1Mxng/w972-h1296-no/photo%2B%284%29.jpg)
 
 ####Entity–Relationship Model (ERD)
 #####First Approach
