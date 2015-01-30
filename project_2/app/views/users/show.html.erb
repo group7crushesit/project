@@ -18,17 +18,11 @@
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span><%= current_user.created_at%></li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last Login</strong></span>     </li>
             </ul>
-           <div class="panel panel-default">
-             <div class="panel-heading">What I'm Looking For:
-                </div>
-                <div class="panel-body"><i style="color:green" class="fa fa-check-square"></i> Jr. Web Developer job in San Francisco.
-                </div>
-            </div>
             <div class="panel panel-default">
                 <div class="panel-heading">Projects I've Worked On:<i class="fa fa-link fa-1x"></i>
 
                 </div>
-                <div class="panel-body"><a href="http://bootply.com" class="">Bryanhernandez.ninja</a>
+                <div class="panel-body"><a href="" class=""></a>
 
                 </div>
             </div>
@@ -63,11 +57,11 @@
         <div class="col-sm-9" contenteditable="false" style="">
 	        <div class="panel panel-default">
 	            <div class="panel-heading">About Me</div>
-	            <div class="panel-body"> A long description about me.</div>
+	            <div class="panel-body"><%= current_user.bio %></div>
 	        </div>
 	        <div class="panel panel-default target">
 	            <div class="panel-heading" contenteditable="false">Community Activity:</div>
-	            <div class="panel-body">
+	            <div class="panel-body" >
 	                <% @user_posts.each do |post| %>
 	            <div class="row">
 	        	<div class="panel panel-success col-md-12" >
@@ -83,13 +77,6 @@
 
 
 <div class="panel panel-inverse col-md-12">
-    <div class="panel-heading" align="center">
-        <h3 class="panel-title">Ride Share</h3>
-
-    </div>
-    <div class="panel-body">
-         Looking for a ride share from Sanoma to G.A? <p><a class="btn btn-primary btn-sml"  href="/users/new">Contact</a></p>
-    </div>
     </div>
 </div>
 </div>
