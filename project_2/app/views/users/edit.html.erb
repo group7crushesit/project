@@ -115,3 +115,19 @@
     </div>
   </div>
 </div>
+
+<!-- Script for Geo_location  -->
+<script>
+$(document).on("ready page:load", function(){
+    var geo = navigator.geolocation;
+    geo.getCurrentPosition(function(data) {
+      console.log(data);
+      lat = data.coords.latitude;
+      lon = data.coords.longitude;
+      $.get("/locations?latitude="+lat+"&longitude="+lon)
+      .done(function(res){
+        console.log(res);
+      })
+    });
+});
+</script>
