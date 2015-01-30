@@ -23,21 +23,16 @@ class BoardsController < ApplicationController
 
   def create
 
-    @post = Board.create(post_params)
-    redirect_to board_path(@post.id)
-
-    # @post = current_user.boards.create(post_params)
+    # @post = Board.create(post_params)
     # redirect_to board_path(@post.id)
+    
+    @post = current_user.boards.new(post_details)
+    if @post.save
+      redirect_to board_path(@post)
+    else 
+      redirect_to new_board_path
+    end
 
-    # below is preferable, couldn't get it to work. above is quick fix.
-
-
-    # post = current_user.boards.new(post_params)
-    # if post.save
-    #   redirect_to board_path(board)
-    # else 
-    #   redirect_to new_board_path
-    # end
   end
 
   def update
@@ -48,7 +43,7 @@ class BoardsController < ApplicationController
 
   private
 
-    def post_params
+    def post_details
       params.require(:board).permit(:title, :description #, :type
         )
     end

@@ -4,7 +4,7 @@
         <div class="col-sm-10">
              <h1 class=""><%= current_user.first_name%> <%= current_user.last_name%></h1>
          
-          <button type="button" class="btn btn-success">Contact Me!</button>  <button type="button" class="btn btn-info">Send me a message</button>
+          <button type="button" class="btn btn-success">Contact Me!</button>
 <br>
         </div>
       <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg"></a>
@@ -61,29 +61,26 @@
         </div>
         <!--/col-3-->
         <div class="col-sm-9" contenteditable="false" style="">
-            <div class="panel panel-default">
-                <div class="panel-heading">About Me:</div>
-                <div class="panel-body"> A long description about me.
-
-                </div>
-            </div>
-            <div class="panel panel-default target">
-                <div class="panel-heading" contenteditable="false">Community Activity: </div>
-                <div class="panel-body">
-                        <div class="row">
-        <div class="panel panel-success col-md-12" >
-            <div class="panel-heading" align="center">
-                <h3 class="panel-title"></h3>
-            </div>
-                <div class="panel-body">
-                Looking for a ruby on rails hacker to join the instagram team.
-                <p><a class="btn btn-primary btn-sml"  href="/users/new">Contact</a></p>
-                </div>
-              </div>
-            </div>
+	        <div class="panel panel-default">
+	            <div class="panel-heading">About Me</div>
+	            <div class="panel-body"> A long description about me.</div>
+	        </div>
+	        <div class="panel panel-default target">
+	            <div class="panel-heading" contenteditable="false">Community Activity:</div>
+	            <div class="panel-body">
+	                <% @user_posts.each do |post| %>
+	            <div class="row">
+	        	<div class="panel panel-success col-md-12" >
+	            <div class="panel-heading" align="center">
+	                <h3 class="panel-title"><%= link_to post.title.titleize , board_path(post.id) %></h3>
+	            </div>
+		                <%= post.description %>
+		                <p><a class="btn btn-primary btn-sml"  href="/users/new">Contact</a></p>
+	            </div>
+	        </div>
         </div>
+        <% end %>
 
-     
 
 <div class="panel panel-inverse col-md-12">
     <div class="panel-heading" align="center">
