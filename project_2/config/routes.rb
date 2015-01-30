@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/sign_up", to: "users#new", as: "sign_up"
 
   get "/login", to: "sessions#new", as: "login"
+  get "logout", to:"sessions#destroy"
 
   get "/logout", to: "sessions#destroy"
 
