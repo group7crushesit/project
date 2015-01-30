@@ -19,4 +19,8 @@ class User < ActiveRecord::Base
   	validates_presence_of :password_digest
 	validates_presence_of :email
 	validates_presence_of :password_digest
+
+	geocoded_by :ip_address,
+  :latitude => :lat, :longitude => :lon
+after_validation :geocode
 end

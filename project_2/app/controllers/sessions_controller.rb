@@ -1,4 +1,7 @@
+
+
 class SessionsController < ApplicationController
+
   def index
   end
 
@@ -32,5 +35,6 @@ class SessionsController < ApplicationController
     flash[:error] = "You've successfully logged out"
     redirect_to login_path
   end
+
 
 end
