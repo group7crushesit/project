@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get "/logout", to: "sessions#destroy"
 
+   get "/locations", to: "locations#index"
+
   resources :sessions, only: [:create]
 
   post "/sessions", to: "sessions#create"

@@ -35,6 +35,14 @@
           </div>
         </div>
 
+<!-- LOCATION -->
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Location:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="<%= current_user.location%>" type="text">
+          </div>
+        </div>
+
 <!-- EMAIL -->
         <div class="form-group">
           <label class="col-lg-3 control-label">Email:</label>
@@ -115,3 +123,19 @@
     </div>
   </div>
 </div>
+
+<!-- Script for Geo_location  -->
+<script>
+$(document).on("ready page:load", function(){
+    var geo = navigator.geolocation;
+    geo.getCurrentPosition(function(data) {
+      console.log(data);
+      lat = data.coords.latitude;
+      lon = data.coords.longitude;
+      $.get("/locations?latitude="+lat+"&longitude="+lon)
+      .done(function(res){
+        console.log(res);
+      })
+    });
+});
+</script>
