@@ -1,9 +1,5 @@
 class BoardsController < ApplicationController
-  # def index
-  #   @posts = Board.all
-  # end
-
-
+  
   def index
     @posts = Board.all.order(created_at: :desc)
   end
@@ -23,9 +19,6 @@ class BoardsController < ApplicationController
 
   def create
 
-    # @post = Board.create(post_params)
-    # redirect_to board_path(@post.id)
-    
     @post = current_user.boards.new(post_details)
     if @post.save
       redirect_to board_path(@post)
@@ -44,8 +37,7 @@ class BoardsController < ApplicationController
   private
 
     def post_details
-      params.require(:board).permit(:title, :description #, :type
-        )
+      params.require(:board).permit(:title, :description)
     end
 
     def find_user_post
