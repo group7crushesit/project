@@ -1,12 +1,39 @@
 <%= form_for @post do |f| %>
-  <div>
-    <%= f.text_field :title, placeholder: "Title" %>
+<div class="container">
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="well well-sm">
+          <form class="form-horizontal" action="" method="post">
+          <fieldset>
+            <legend class="text-center">Contact us</legend>
+    
+            <!-- Name input-->
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="name">Title</label>
+              <div class="col-md-9">
+               <%= f.text_field :title, placeholder: "Title" %>
+              </div>
+            </div>
+    
+    
+            <!-- Message body -->
+            <div class="form-group">
+            
+              <div class="col-md-9">
+                <%= f.text_area :description, placeholder: "Description" %>
+              </div>
+            </div>
+    
+            <!-- Form actions -->
+            <div class="form-group">
+              <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+          </form>
+        </div>
+      </div>
   </div>
-  <div>
-    <%= f.text_area :description, placeholder: "Description" %>
-  </div>
-  <!-- <div>
-  	<%= f.text_area :type, palceholder: "Type" %>
-  </div> -->
-  <%= f.submit %>
-<% end %>
+</div>
+<% end -%>
