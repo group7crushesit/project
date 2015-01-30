@@ -1,7 +1,15 @@
 class BoardsController < ApplicationController
+  # def index
+  #   @posts = Board.all
+  # end
+
+
   def index
-    @posts = Board.all
+    # @posts = Board.paginate(:page => params[:page], :per_page => 8)
+     @posts = Board.paginate(page: params[:page], per_page: 8).order('created_at DESC')
   end
+
+
 
   def new
     @post = Board.new
