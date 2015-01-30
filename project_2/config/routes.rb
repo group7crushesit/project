@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "sites#index" 
 
-  resources :users, except: [:index, :new]
+  resources :users, except: [:index]
 
   resources :boards
 
