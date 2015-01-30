@@ -85,7 +85,13 @@ Auto-expire posts<br>
 Email Notifications for new board postings<br>
 Twitter-like feed and posting<br>
 Allow outsiders to post to the job board<br>
+
 ####Outstanding issues
+Not Partialized
+Divs are overflowing
+Login / Signup not removed after user is signed in
+Heroku
+Add more rspec validation
 
 ####Resources
 ######(GEMS, APIs, frameworks, Toolkits and other Resources)
