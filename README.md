@@ -42,9 +42,9 @@ Build basic rails app with no frills, practice Git and how to do group check-ins
 **Day 3:** 
 Design sitemap and models. Design basic wireframes and userflow<br>
 **Day 4:** 
-Create basic validations. Build up basic user, board and sessions models, controllers and views<br>
+Create basic RSPEC validations. Build up basic user, board and sessions models, controllers and views<br>
 **Day 5:**
-Add authorization. Further define user and board models and views. Install bootstrap and UI Kits<br>
+Add authorization. Further define user and board models and views (and validations). Install bootstrap and UI Kits<br>
 **Day 6:**
 Bridge front and backend together. Add location API<br> 
 
