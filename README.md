@@ -93,6 +93,7 @@ Divs are overflowing
 Login / Signup not removed after user is signed in
 Heroku
 Add more rspec validation
+Add Skills / Interests / Courses to user form.
 
 ####Resources
 ######(GEMS, APIs, frameworks, Toolkits and other Resources)
