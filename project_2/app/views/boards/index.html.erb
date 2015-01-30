@@ -10,12 +10,15 @@
 <button type="button" class="btn btn-defualt" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Other</button>
 </div>
 
+<!-- <li><a href="/boards/new">Create Board</a></li> -->
+
 
 <% @posts.each do |post| %>
 <div class="row">
 <div class="container">
-<div class="panel panel-success">
-    <div class="panel-heading" align="center">
+<div class="panel">
+    <div class="panel-heading" align="center" style="
+    background-color: #FA4542;">
         <h3 class="panel-title"><%= link_to post.title.titleize , board_path(post.id) %></h3>
     </div>
     <div class="panel-body">
