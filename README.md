@@ -88,12 +88,13 @@ Twitter-like feed and posting<br>
 Allow outsiders to post to the job board<br>
 
 ####Outstanding issues
-Not Partialized
-Divs are overflowing
-Login / Signup not removed after user is signed in
-Heroku
-Add more rspec validation
-Add Skills / Interests / Courses to user form.
+User form not submitting<br>
+Not Partialized<br>
+Divs are overflowing<br>
+Login / Signup not removed after user is signed in<br>
+Heroku<br>
+Add more rspec validation<br>
+Add Skills / Interests / Courses to user form
 
 ####Resources
 ######(GEMS, APIs, frameworks, Toolkits and other Resources)
