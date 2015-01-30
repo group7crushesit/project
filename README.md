@@ -80,6 +80,7 @@ In our second approach, we unified the user and GA roles into one table and set 
 ~~Extended Profiles (Social Links)~~<br>
 Autocomplete course directory<br>
 Filter Board based on board type<br>
+Board Item should expand on click<br>
 Search and view all users<br>
 Autocomplete skills and interests<br>
 Auto-expire posts<br>
