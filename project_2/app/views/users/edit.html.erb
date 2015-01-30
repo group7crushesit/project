@@ -1,5 +1,6 @@
 
 <div class="container" style="padding-top: 60px;">
+
   <h1 class="page-header">Edit Profile</h1>
   <div class="row">
     <!-- left column -->
@@ -19,6 +20,7 @@
       </div>
       <h3>Personal info</h3>
 <!-- FIRST NAME -->
+      <%= form_for @user do |f| %>
       <form class="form-horizontal" role="form">
         <div class="form-group">
           <label class="col-lg-3 control-label">First name:</label>
@@ -39,7 +41,8 @@
         <div class="form-group">
           <label class="col-lg-3 control-label">Location:</label>
           <div class="col-lg-8">
-            <input class="form-control" value="<%= current_user.location%>" type="text">
+          <p class="cool-location"></p>
+            <input class="form-control"."cool-location" value="<%= current_user.location%>" type="text">
           </div>
         </div>
 
@@ -90,18 +93,7 @@
           </div>
         </div>
 
-<!-- HOW ARE YOU G.A ? -->
-<div class="form-group">
-          <label class="col-lg-3 control-label">How are you G.A?</label>
-          <div class="col-lg-8">
-            <div class="ui-select">
-              <select id="user_time_zone" class="form-control">
-                <option value="Student">Student</option>
-                <option value="Teacher">Teacher</option>
-              </select>
-            </div>
-          </div>
-        </div>
+
 <!--  MESSEGE -->
         <div class="form-group">
           <label class="col-lg-3 control-label">Short Bio</label>
@@ -114,7 +106,7 @@
         <div class="form-group">
           <label class="col-md-3 control-label"></label>
           <div class="col-md-8">
-            <input class="btn btn-primary" value="Save Changes" type="button">
+            <input class="btn btn-primary" value="Save Changes" type="submit">
             <span></span>
             <input class="btn btn-default" value="Cancel" type="reset">
           </div>
@@ -123,6 +115,7 @@
     </div>
   </div>
 </div>
+<% end %>
 
 <!-- Script for Geo_location  -->
 <script>
@@ -134,8 +127,10 @@ $(document).on("ready page:load", function(){
       lon = data.coords.longitude;
       $.get("/locations?latitude="+lat+"&longitude="+lon)
       .done(function(res){
+        var $loc = $(".cool-location");
+        $loc.html("Hint: Your current location is "+res.city);
         console.log(res);
       })
     });
 });
-</script>
+</script
