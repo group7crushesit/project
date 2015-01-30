@@ -3,6 +3,7 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :email
       t.string :password_digest
+      t.string :location
       t.string :linkedin_url
       t.string :github_url
       t.string :dribbble_url
