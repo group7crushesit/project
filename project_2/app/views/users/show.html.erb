@@ -1,17 +1,13 @@
-SUP <%= current_user.email %>!
-
-<a href = "/logout">LOGOUT</a>
 <hr class="">
 <div class="container target">
     <div class="row">
         <div class="col-sm-10">
-             <h1 class="">Bryan Hernandez</h1>
+             <h1 class=""><%= current_user.first_name%> <%= current_user.last_name%></h1>
          
           <button type="button" class="btn btn-success">Contact Me!</button>  <button type="button" class="btn btn-info">Send me a message</button>
 <br>
         </div>
       <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg"></a>
-
         </div>
     </div>
   <br>
@@ -19,23 +15,17 @@ SUP <%= current_user.email %>!
         <div class="col-sm-3">
             <!--left col-->
             <ul class="list-group">
-                <li class="list-group-item text-muted" contenteditable="false">Profile</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> 1.28.2015</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span> Yesterday</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Real name</strong></span> Bryan Hernandez</li>
-              <li class="list-group-item text-right"><span class="pull-left"><strong class="">Role: </strong></span> Web Developer
-               
-                      </li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span><%= current_user.created_at%></li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last Login</strong></span>     </li>
             </ul>
            <div class="panel panel-default">
-             <div class="panel-heading">What im looking for?
-
+             <div class="panel-heading">What I'm Looking For:
                 </div>
                 <div class="panel-body"><i style="color:green" class="fa fa-check-square"></i> Jr. Web Developer job in San Francisco.
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i>
+                <div class="panel-heading">Projects I've Worked On:<i class="fa fa-link fa-1x"></i>
 
                 </div>
                 <div class="panel-body"><a href="http://bootply.com" class="">Bryanhernandez.ninja</a>
@@ -72,13 +62,13 @@ SUP <%= current_user.email %>!
         <!--/col-3-->
         <div class="col-sm-9" contenteditable="false" style="">
             <div class="panel panel-default">
-                <div class="panel-heading">Bryan's Bio</div>
+                <div class="panel-heading">About Me:</div>
                 <div class="panel-body"> A long description about me.
 
                 </div>
             </div>
             <div class="panel panel-default target">
-                <div class="panel-heading" contenteditable="false">Boards I'v Posted</div>
+                <div class="panel-heading" contenteditable="false">Community Activity: </div>
                 <div class="panel-body">
                         <div class="row">
         <div class="panel panel-success col-md-12" >
