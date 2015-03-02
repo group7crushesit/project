@@ -4,10 +4,11 @@
         <div class="col-sm-10">
              <h1 class=""><%= current_user.first_name%> <%= current_user.last_name%></h1>
          
-          <button type="button" class="btn btn-success">Contact Me!</button>
+          <button type="button" class="btn btn-success" style="
+    background-color: black;">Contact Me!</button>
 <br>
         </div>
-      <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg"></a>
+      <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/7/000/219/1ec/09481e2.jpg"></a>
         </div>
     </div>
   <br>
@@ -27,24 +28,17 @@
                 </div>
             </div>
           
-            <ul class="list-group">
-                <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i>
-
-                </li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Shares</strong></span> 125</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Likes</strong></span> 13</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Posts</strong></span> 37</li>
-                        <li class="list-group-item text-right"><span class="pull-left"><strong class="">Followers</strong></span> 78</li>
-            </ul>
+            
             <div class="panel panel-default">
                 <div class="panel-heading">Social Media</div>
                 <div class="panel-body">	<i class="fa fa-facebook fa-2x"></i>  <i class="fa fa-github fa-2x"></i> 
                     <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i>  <i class="fa fa-google-plus fa-2x"></i>
                            <p> 
-                        <a href="http://twitter.com/Bootply" rel="nofollow" title="Bootply on Twitter" target="ext">Twitter</a><br>
-                        <a href="https://plus.google.com/+Bootply" rel="publisher">Google+</a><br>
-                        <a href="http://facebook.com/Bootply" rel="nofollow" title="Bootply on Facebook" target="ext">Facebook</a><br>
+                        <a href="http://twitter.com/Bootply" rel="nofollow" title="Bootply on Twitter" target="ext">LinkedIn</a><br>
+                        <a href="https://plus.google.com/+Bootply" rel="publisher">Dribbble</a><br>
+                        <a href="http://facebook.com/Bootply" rel="nofollow" title="Bootply on Facebook" target="ext">Behance</a><br>
                         <a href="https://github.com/iatek/bootply" title="Bootply on GitHub" target="ext">GitHub</a><br>
+                        <a href="https://github.com/iatek/bootply" title="Bootply on GitHub" target="ext">Website</a><br>
                     </p>
 
 
@@ -65,7 +59,8 @@
 	                <% @user_posts.each do |post| %>
 	            <div class="row">
 	        	<div class="panel panel-success col-md-12" >
-	            <div class="panel-heading" align="center">
+	            <div class="panel-heading" align="center" style="
+    background-color: teal;">
 	                <h3 class="panel-title"><%= link_to post.title.titleize , board_path(post.id) %></h3>
 	            </div>
 		                <%= post.description %>
