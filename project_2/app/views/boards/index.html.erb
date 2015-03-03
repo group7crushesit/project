@@ -1,2 +1,32 @@
-<h1>Board#index</h1>
-<p>Find me in app/views/board/index.html.erb</p>
+<h1 align="center">Community Boards</h1>
+<div align="center" >
+<button type="button" class="btn btn-defualt" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Jobs</button>
+
+<button type="button" class="btn btn-defualt" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">Ride Share</button>
+
+<button type="button" class="btn btn-defualt" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">Collaborate</button>
+
+<button type="button" class="btn btn-defualt" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Other</button>
+
+<button type="button" class="btn btn-defualt" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right"><a href="/boards/new">New</a></button>
+</div>
+
+<% @posts.each do |post| %>
+<div class="row"style="
+    background-color: gray;">
+<div class="container" >
+<div class="panel" >
+    <div class="panel-heading" align="center" style="
+    background-color: warning;">
+        <h3 class="panel-title"><%= link_to post.title.titleize , board_path(post.id) %></h3>
+    </div>
+    <div class="panel-body" >
+      <%= post.description %>
+        <p><a class="btn btn-sml"  href="/users/new" style="
+    background-color: gray;" >Contact</a></p>
+    </div>
+    </div>
+</div>
+</div>
+<% end %>
+<%= will_paginate @posts %>

@@ -16,3 +16,16 @@
 //= require_bootstrap-3.3.2.min.js
 //= sdfs
 //= require_tree .
+//= require bootstrap/dist/js/bootstrap
+$(document).ready(function() {
+  if ($('.pagination').length) {
+    $(window).scroll(function() {
+      var url = $('.pagination .next_page').attr('href');
+      if (url && $(window).scrollTop() > $(document).height() - $(window).height() - 50) {
+        $('.pagination').text("Please Wait...");
+        return $.getScript(url);
+      }
+    });
+    return $(window).scroll();
+  }
+});

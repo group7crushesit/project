@@ -11,12 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150127190531) do
+ActiveRecord::Schema.define(version: 20150129040727) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
-    t.string   "description"
     t.string   "type"
+    t.text     "description"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -35,24 +39,56 @@ ActiveRecord::Schema.define(version: 20150127190531) do
     t.date     "enrollment_date"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "student_id"
+    t.integer  "user_id"
     t.integer  "course_id"
   end
 
-  create_table "students", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "bio"
-    t.string   "course"
+  create_table "interests", force: :cascade do |t|
+    t.string   "interest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string   "skill"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "student_id"
+    t.integer  "skill_id"
+  end
+
+  create_table "userinterests", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "interest_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "student_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password_digest"
+    t.string   "location"
+    t.string   "linkedin_url"
+    t.string   "github_url"
+    t.string   "dribbble_url"
+    t.string   "behance_url"
+    t.string   "website_url"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.boolean  "student"
+    t.boolean  "ga_staff"
+    t.boolean  "outsider"
+    t.text     "bio"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "userskills", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "skill_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

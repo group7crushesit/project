@@ -1,12 +1,82 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project2</title>
+  <title>GA Connect</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" type="text/css" href="">
 </head>
 <body>
+
+
+
+
+
+
+<div class="navbar navbar-black">
+    <div class="navbar-header" class="bbg">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/" >
+          <img alt="Ga-lockup" width="300em"; src="https://ga-core-production-herokuapp-com.global.ssl.fastly.net/assets/ga-lockup-61c4920d0981703871ab3256bc786a2f.png">
+
+        </a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+            <li><h2 style="color: white;">Connect</h2></li>
+            <li><a href="/boards"></a></li>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/boards">Community</a></li>
+            <li><a href="/users/show">My Profile</a></li>
+            <li><a href="/users/01/edit">Edit Profile</a></li>
+            <li><a href="/sites/index">All Profiles</a></li>
+               </ul>
+            </li>
+        </ul>
+<ul class="nav navbar-nav navbar-right">
+                  <li><a href="/users/new">Sign Up</a></li>
+                  <li class="dropdown">
+                     <a href="/sessions/new" class="dropdown-toggle" data-toggle="dropdown">Sign in <b class="caret"></b></a>
+                     <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
+                        <li>
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                    <div class="form-group">
+                                       <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                       <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                    </div>
+                                    <div class="form-group">
+                                       <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                       <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                    </div>
+                                    <div class="checkbox">
+                                       <label>
+                                       <input type="checkbox"> Remember me
+                                       </label>
+                                    </div>
+                                    <div class="form-group">
+                                       <button type="submit" class="btn btn-success btn-block">Sign in</button>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                        </li>
+                        <li><a href="#">Sign Up</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+</div>
 
 <%= yield %>
 

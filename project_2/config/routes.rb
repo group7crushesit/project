@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root to: "sites#index" 
 
-  get "/login", to: "sessions#new"
-
   resources :users
 
   resources :boards
@@ -11,9 +9,17 @@ Rails.application.routes.draw do
   
   get "/sign_up", to: "users#new", as: "sign_up"
 
+  # post "/sessions", to: "sessions#create"
+  get "/login", to: "sessions#new", as: "login"
+
   get "/logout", to: "sessions#destroy"
 
+  get "/locations", to: "locations#index"
+
+  resources :sessions, only: [:create, :destroy]
+
   post "/sessions", to: "sessions#create"
+
 end
 
 #  Prefix Verb   URI Pattern               Controller#Action
