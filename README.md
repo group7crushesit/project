@@ -27,11 +27,10 @@ To allow a user to create a profile with their contact details and create boardp
 
 ####User Stories
 
-  - User should be able to register as a student or part of GA's staff for the site.
-  - User should be able to complete their profile with content about themselves as well as links to their portfolio and contact information
-  - User should be able to create boardposts
-  - User should be able to view other's boardposts
-
+  - As a member of the GA Community, I want to share my professional and personal details with the community so that we can connect and leverage each others skills and connections to help each other out (User can create a profile, links to their portfolio and contact information)
+  - 
+  - As a member of the GA Community, I want to be able to ask for collaborators, help or offer help so that we can work on projects, find housing, find work or share skills knowledge (User should be able to create boardposts)
+  - As a member of the GA community, I want to be able to see who needs help or opportunities that I can collaborate on (Viewing postings)
 
 ####Milestones
 
