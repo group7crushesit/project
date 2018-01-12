@@ -116,7 +116,7 @@ Geolocation: in-built browser capability to get IP address of users<br>
 
 
 
-####Contributors
+####Contributors<br>
 [Ajesh Shah](https://github.com/ajeshh)<br>
 [Alex Fulsome](https://github.com/alexfulsome)<br>
 [Bryan Hernandez](https://github.com/Bryan1207)<br>
